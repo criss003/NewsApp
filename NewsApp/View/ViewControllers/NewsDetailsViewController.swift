@@ -8,8 +8,8 @@
 import UIKit
 
 struct NewsDetailsViewControllerConstants {
-    static let contactDetailsCellIdentifier = "ContactDetailTableViewCell"
-    static let contactDetailsAvatarCellIdentifier = "ContactDetailAvatarTableViewCell"
+    static let detailCellIdentifier = "NewsDetailTableViewCell"
+    static let detailMainCellIdentifier = "NewsDetailMainTableViewCell"
 }
 
 class NewsDetailsViewController: UIViewController {
@@ -20,7 +20,6 @@ class NewsDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
 }
 
@@ -33,10 +32,14 @@ extension NewsDetailsViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NewsListViewControllerConstants.newsCellIdentifier, for: indexPath) as! NewsTableViewCell
-        cell.configure(article: viewModel.articleAt(indexPath: indexPath))
-
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: NewsDetailsViewControllerConstants.detailMainCellIdentifier, for: indexPath) as! NewsDetailMainTableViewCell
+            cell.configure(imageUrl: "")
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: NewsDetailsViewControllerConstants.detailCellIdentifier, for: indexPath) as! NewsDetailTableViewCell
+            cell.configure(value: "val")
+            return cell
+        }
     }
-
 }
