@@ -41,12 +41,6 @@ class NewsListViewController: UIViewController {
         viewModel.delegate = self
         viewModel.performModelUpdate()
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewController = segue.destination as? NewsDetailsViewController {
-            viewController.viewModel = NewsDetailViewModel(article: viewModel.selectedArticle)
-        }
-    }
 }
 
 extension NewsListViewController: NewsViewModelDelegate {
@@ -82,8 +76,12 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.selectArticle(indexPath: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
+        let article = viewModel.articleAt(indexPath: indexPath)
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewsDetailsViewController") as? NewsDetailsViewController {
+            viewController.viewModel = NewsDetailViewModel(article: article)
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 

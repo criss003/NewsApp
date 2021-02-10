@@ -47,20 +47,20 @@
                                                     <rect key="frame" x="15" y="10" width="384" height="291"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="shb-Qa-yiu" customClass="NewsImageView" customModule="NewsApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="384" height="291"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="384" height="200"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="300" id="961-8d-Tdc"/>
-                                                                <constraint firstAttribute="height" constant="300" id="s1G-Sr-rmp"/>
+                                                                <constraint firstAttribute="width" constant="200" id="961-8d-Tdc"/>
+                                                                <constraint firstAttribute="height" constant="200" id="s1G-Sr-rmp"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsy-ZA-zqj">
-                                                            <rect key="frame" x="0.0" y="291" width="384" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="200" width="384" height="74"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wto-AC-7Qz">
-                                                            <rect key="frame" x="0.0" y="291" width="384" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="274" width="384" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -88,7 +88,6 @@
                                             <outlet property="hoursLabel" destination="Lsy-ZA-zqj" id="pro-2e-yCn"/>
                                             <outlet property="newsImageView" destination="shb-Qa-yiu" id="TI9-Iu-RIE"/>
                                             <outlet property="titleLabel" destination="wto-AC-7Qz" id="0oM-9H-XAc"/>
-                                            <segue destination="jER-ri-isF" kind="show" id="8h4-uM-KHk"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" rowHeight="82" id="zeX-mt-jkh" customClass="NewsTableViewCell" customModule="NewsApp" customModuleProvider="target">
@@ -145,7 +144,6 @@
                                             <outlet property="hoursLabel" destination="Fbe-18-KlD" id="R1K-Id-KaD"/>
                                             <outlet property="newsImageView" destination="UbM-hR-bO8" id="UFk-0r-lwJ"/>
                                             <outlet property="titleLabel" destination="RDE-EN-CPg" id="37l-D7-gBw"/>
-                                            <segue destination="jER-ri-isF" kind="show" id="GSv-1J-0PX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -181,13 +179,13 @@
         <!--News Details View Controller-->
         <scene sceneID="L8F-B9-2pv">
             <objects>
-                <viewController id="jER-ri-isF" customClass="NewsDetailsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsDetailsViewController" id="jER-ri-isF" customClass="NewsDetailsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RFE-Du-3JU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S2S-NS-FJh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S2S-NS-FJh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsDetailMainTableViewCell" rowHeight="337" id="cc2-mT-hsZ" customClass="NewsDetailMainTableViewCell" customModule="NewsApp" customModuleProvider="target">
@@ -197,12 +195,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="337"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hdm-QB-6FR" customClass="NewsImageView" customModule="NewsApp" customModuleProvider="target">
-                                                    <rect key="frame" x="57" y="26" width="300" height="285"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hdm-QB-6FR" customClass="NewsImageView" customModule="NewsApp" customModuleProvider="target">
+                                                    <rect key="frame" x="107" y="11" width="200" height="315"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="5dZ-zd-fMF"/>
-                                                        <constraint firstAttribute="width" constant="300" id="jNF-TL-yhW"/>
+                                                        <constraint firstAttribute="height" constant="200" id="5dZ-zd-fMF"/>
+                                                        <constraint firstAttribute="width" constant="200" id="jNF-TL-yhW"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -212,10 +210,10 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Hdm-QB-6FR" secondAttribute="bottom" constant="15" id="ZBV-49-Fha"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hdm-QB-6FR" secondAttribute="bottom" id="ZBV-49-Fha"/>
                                                 <constraint firstItem="Hdm-QB-6FR" firstAttribute="centerY" secondItem="iZO-80-uP9" secondAttribute="centerY" id="j6g-E3-IHg"/>
                                                 <constraint firstItem="Hdm-QB-6FR" firstAttribute="centerX" secondItem="iZO-80-uP9" secondAttribute="centerX" id="k8U-yM-ikE"/>
-                                                <constraint firstItem="Hdm-QB-6FR" firstAttribute="top" secondItem="iZO-80-uP9" secondAttribute="topMargin" constant="15" id="rXv-LK-si1"/>
+                                                <constraint firstItem="Hdm-QB-6FR" firstAttribute="top" secondItem="iZO-80-uP9" secondAttribute="topMargin" id="rXv-LK-si1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -223,23 +221,23 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsDetailTableViewCell" id="rhD-9y-xLE" customClass="NewsDetailTableViewCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="365" width="414" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="365" width="414" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rhD-9y-xLE" id="Wuf-BX-KLc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Std-Im-H01">
-                                                    <rect key="frame" x="15" y="15" width="384" height="17.5"/>
+                                                    <rect key="frame" x="15" y="10" width="384" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Std-Im-H01" secondAttribute="bottom" constant="15" id="4eu-A2-JN1"/>
+                                                <constraint firstAttribute="bottom" secondItem="Std-Im-H01" secondAttribute="bottom" constant="10" id="4eu-A2-JN1"/>
                                                 <constraint firstAttribute="trailing" secondItem="Std-Im-H01" secondAttribute="trailing" constant="15" id="Aol-eJ-kAf"/>
-                                                <constraint firstItem="Std-Im-H01" firstAttribute="top" secondItem="Wuf-BX-KLc" secondAttribute="top" constant="15" id="IrL-Sl-ipt"/>
+                                                <constraint firstItem="Std-Im-H01" firstAttribute="top" secondItem="Wuf-BX-KLc" secondAttribute="top" constant="10" id="IrL-Sl-ipt"/>
                                                 <constraint firstItem="Std-Im-H01" firstAttribute="leading" secondItem="Wuf-BX-KLc" secondAttribute="leading" constant="15" id="mio-M4-V0l"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -273,9 +271,6 @@
             <point key="canvasLocation" x="379.71014492753625" y="624.77678571428567"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="GSv-1J-0PX"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
