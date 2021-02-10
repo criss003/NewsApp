@@ -10,8 +10,8 @@ import UIKit
 class NewsDetailMainTableViewCell: UITableViewCell {
     @IBOutlet weak var newsImageView: NewsImageView!
     
-    func configure(imageUrl: String?) {
-        newsImageView.loadImage(urlString: imageUrl)
+    func configure(value: String?) {
+        newsImageView.loadImage(urlString: value)
     }
     
     override func prepareForReuse() {

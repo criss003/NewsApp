@@ -245,6 +245,27 @@
                                             <outlet property="valueLabel" destination="Std-Im-H01" id="5ov-MB-AKn"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsDetailFullArticleTableViewCell" id="gyH-a6-k8U" customClass="NewsDetailFullArticleTableViewCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="402" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gyH-a6-k8U" id="6kg-ol-wpP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFy-kM-YnF">
+                                                    <rect key="frame" x="171.5" y="7" width="71" height="30"/>
+                                                    <state key="normal" title="Full article"/>
+                                                    <connections>
+                                                        <action selector="buttonAction:" destination="gyH-a6-k8U" eventType="touchUpInside" id="QYh-SU-KMM"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NFy-kM-YnF" firstAttribute="centerX" secondItem="6kg-ol-wpP" secondAttribute="centerX" id="a8i-rZ-Tfe"/>
+                                                <constraint firstItem="NFy-kM-YnF" firstAttribute="centerY" secondItem="6kg-ol-wpP" secondAttribute="centerY" id="liC-9B-58g"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="jER-ri-isF" id="hX7-jH-eIA"/>
