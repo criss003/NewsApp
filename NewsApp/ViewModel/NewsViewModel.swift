@@ -51,13 +51,11 @@ class NewsViewModel {
         return nil
     }
     
-    // MARK: Contacts
-    
     func numberOfRowsForArticles() -> Int {
         return articleListArray.count
     }
     
-    // MARK: Contact Details
+    // MARK: Articles Details
     
     func numberOfRows() -> Int {
         return RowTypeModel.allCases.count
