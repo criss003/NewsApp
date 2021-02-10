@@ -25,6 +25,7 @@
 		2896DCBB25D3416700E2E6FA /* NewsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896DCBA25D3416700E2E6FA /* NewsImageView.swift */; };
 		28C55BC125D4790E000C7AF9 /* NewsDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C55BC025D4790E000C7AF9 /* NewsDetailTableViewCell.swift */; };
 		28C55BC425D47915000C7AF9 /* NewsDetailMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C55BC325D47915000C7AF9 /* NewsDetailMainTableViewCell.swift */; };
+		28C55BC825D47E66000C7AF9 /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C55BC725D47E66000C7AF9 /* NewsDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		2896DCBA25D3416700E2E6FA /* NewsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsImageView.swift; sourceTree = "<group>"; };
 		28C55BC025D4790E000C7AF9 /* NewsDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailTableViewCell.swift; sourceTree = "<group>"; };
 		28C55BC325D47915000C7AF9 /* NewsDetailMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailMainTableViewCell.swift; sourceTree = "<group>"; };
+		28C55BC725D47E66000C7AF9 /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2896DCA025D3365600E2E6FA /* NewsViewModel.swift */,
+				28C55BC725D47E66000C7AF9 /* NewsDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				2896DCBB25D3416700E2E6FA /* NewsImageView.swift in Sources */,
 				2896DCA725D3365600E2E6FA /* NewsTableViewCell.swift in Sources */,
 				28C55BC125D4790E000C7AF9 /* NewsDetailTableViewCell.swift in Sources */,
+				28C55BC825D47E66000C7AF9 /* NewsDetailViewModel.swift in Sources */,
 				2896DCA425D3365600E2E6FA /* NewsListViewController.swift in Sources */,
 				2896DCA325D3365600E2E6FA /* NewsDetailsViewController.swift in Sources */,
 			);

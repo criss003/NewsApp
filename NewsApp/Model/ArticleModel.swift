@@ -19,6 +19,7 @@ struct ArticlesModel: Codable {
 struct ArticleModel: Codable {
     let title: String?
     let description: String?
+    let author: String?
     let url: String?
     let urlToImage: String?
     let publishedAt: String?

@@ -20,17 +20,12 @@ protocol NewsViewModelDelegate: class {
 }
 
 class NewsViewModel {
-        
-    // MARK: Vars
-    
-    weak var delegate: NewsViewModelDelegate?
-        
     var articleListArray: [ArticleModel] = []
     var selectedArticle: ArticleModel?
     
-    // MARK: Methods
+    weak var delegate: NewsViewModelDelegate?
         
-    func performModelUpdate() {
+   func performModelUpdate() {
         NewsService().fetchContacts(completionHandler: { articlesModel in
             self.articleListArray = articlesModel.articles
             self.delegate?.modelUpdateDidFinish()
@@ -53,18 +48,5 @@ class NewsViewModel {
     
     func numberOfRowsForArticles() -> Int {
         return articleListArray.count
-    }
-    
-    // MARK: Articles Details
-    
-    func numberOfRows() -> Int {
-        return RowTypeModel.allCases.count
-    }
-    
-    func rowInfo(at indexPath: IndexPath) -> (title: String?, value: String?, avatar: String?) {
-        //guard let rowType = RowTypeModel(rawValue: indexPath.row) else {
-            return (nil, nil, nil)
-        //}
-        //return (rowType.title, rowType.value(contactModel: selectedArticle), rowType.avatar(contactModel: selectedContact))
     }
 }

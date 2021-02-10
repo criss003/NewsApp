@@ -44,7 +44,7 @@ class NewsListViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? NewsDetailsViewController {
-            viewController.viewModel = viewModel
+            viewController.viewModel = NewsDetailViewModel(article: viewModel.selectedArticle)
         }
     }
 }

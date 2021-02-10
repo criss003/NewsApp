@@ -88,7 +88,7 @@
                                             <outlet property="hoursLabel" destination="Lsy-ZA-zqj" id="pro-2e-yCn"/>
                                             <outlet property="newsImageView" destination="shb-Qa-yiu" id="TI9-Iu-RIE"/>
                                             <outlet property="titleLabel" destination="wto-AC-7Qz" id="0oM-9H-XAc"/>
-                                            <segue destination="jER-ri-isF" kind="show" id="EHS-cZ-eGm"/>
+                                            <segue destination="jER-ri-isF" kind="show" id="8h4-uM-KHk"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" rowHeight="82" id="zeX-mt-jkh" customClass="NewsTableViewCell" customModule="NewsApp" customModuleProvider="target">
@@ -145,6 +145,7 @@
                                             <outlet property="hoursLabel" destination="Fbe-18-KlD" id="R1K-Id-KaD"/>
                                             <outlet property="newsImageView" destination="UbM-hR-bO8" id="UFk-0r-lwJ"/>
                                             <outlet property="titleLabel" destination="RDE-EN-CPg" id="37l-D7-gBw"/>
+                                            <segue destination="jER-ri-isF" kind="show" id="GSv-1J-0PX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -272,6 +273,9 @@
             <point key="canvasLocation" x="379.71014492753625" y="624.77678571428567"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GSv-1J-0PX"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
