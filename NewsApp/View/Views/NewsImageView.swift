@@ -29,6 +29,7 @@ class NewsImageView: UIImageView {
                 }
             }
         } else {
+            activityIndicator.stopAnimating()
             setupDefaultImage()
         }
     }

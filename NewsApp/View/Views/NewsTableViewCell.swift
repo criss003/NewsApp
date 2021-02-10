@@ -20,6 +20,6 @@ class NewsTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        newsImageView?.setupDefaultImage()
+        newsImageView?.image = nil
     }
 }

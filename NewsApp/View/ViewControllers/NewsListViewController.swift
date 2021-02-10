@@ -9,7 +9,8 @@ import UIKit
 
 struct NewsListViewControllerConstants {
     static let title = "Front Page"
-    static let contactCellIdentifier = "NewsTableViewCell"
+    static let newsCellIdentifier = "NewsTableViewCell"
+    static let newsMainCellIdentifier = "NewsMainTableViewCell"
 }
 
 class NewsListViewController: UIViewController {
@@ -67,10 +68,15 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NewsListViewControllerConstants.contactCellIdentifier, for: indexPath) as! NewsTableViewCell
-        cell.configure(article: viewModel.articleAt(indexPath: indexPath))
-
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: NewsListViewControllerConstants.newsMainCellIdentifier, for: indexPath) as! NewsMainTableViewCell
+            cell.configure(article: viewModel.articleAt(indexPath: indexPath))
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: NewsListViewControllerConstants.newsCellIdentifier, for: indexPath) as! NewsTableViewCell
+            cell.configure(article: viewModel.articleAt(indexPath: indexPath))
+            return cell
+        }
     }
     
     // MARK: UITableViewDelegate

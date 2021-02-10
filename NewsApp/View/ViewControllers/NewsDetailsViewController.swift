@@ -33,16 +33,10 @@ extension NewsDetailsViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: NewsDetailsViewControllerConstants.contactDetailsAvatarCellIdentifier, for: indexPath) as! ContactDetailAvatarTableViewCell
-            cell.configure(rowInfo: viewModel.rowInfo(at: indexPath))
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: NewsDetailsViewControllerConstants.contactDetailsCellIdentifier, for: indexPath) as! ContactDetailTableViewCell
-            cell.configure(rowInfo: viewModel.rowInfo(at: indexPath))
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsListViewControllerConstants.newsCellIdentifier, for: indexPath) as! NewsTableViewCell
+        cell.configure(article: viewModel.articleAt(indexPath: indexPath))
+
+        return cell
     }
 
 }
