@@ -23,16 +23,18 @@ struct NewsServiceConstants {
 
 class NewsService {
     
-    func fetchContacts(completionHandler: @escaping (ArticlesModel) -> Void) {
+    func fetchArticles(completionHandler: @escaping (ArticlesModel?) -> Void) {
         
         performRequest(urlString: NewsServiceConstants.newsURL, errorHandler: { error in
             print(error.localizedDescription)
+            completionHandler(nil)
         }, successHandler: { data in
             do {
                 let articlesModel = try JSONDecoder().decode(ArticlesModel.self, from: data)
                 completionHandler(articlesModel)
             } catch let jsonError {
                 print(jsonError.localizedDescription)
+                completionHandler(nil)
             }
         })
     }

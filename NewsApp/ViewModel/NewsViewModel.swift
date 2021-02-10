@@ -26,8 +26,10 @@ class NewsViewModel {
     weak var delegate: NewsViewModelDelegate?
         
    func performModelUpdate() {
-        NewsService().fetchContacts(completionHandler: { articlesModel in
-            self.articleListArray = articlesModel.articles
+        NewsService().fetchArticles(completionHandler: { articlesModel in
+            if let articles = articlesModel?.articles {
+                self.articleListArray = articles
+            }
             self.delegate?.modelUpdateDidFinish()
         })
 
