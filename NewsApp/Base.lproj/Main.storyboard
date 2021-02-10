@@ -196,17 +196,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hdm-QB-6FR" customClass="NewsImageView" customModule="NewsApp" customModuleProvider="target">
-                                                    <rect key="frame" x="107" y="11" width="200" height="315"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="315"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="200" id="5dZ-zd-fMF"/>
-                                                        <constraint firstAttribute="width" constant="200" id="jNF-TL-yhW"/>
+                                                        <constraint firstAttribute="height" constant="315" id="5dZ-zd-fMF"/>
+                                                        <constraint firstAttribute="width" constant="374" id="jNF-TL-yhW"/>
                                                     </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="50"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
