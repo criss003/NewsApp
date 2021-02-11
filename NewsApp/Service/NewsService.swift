@@ -10,15 +10,10 @@ import Foundation
 struct NewsServiceConstants {
     static let newsURL = "http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=f71af7261c434b5d8be60816ed910d8b"
     
-    static let contactsFileName = "contacts"
-    static let contactsFileType = "json"
-    
     static let invalidURLErrorMessage = "Invalid URL"
     static let invalidURLErrorCode = 10001
     static let invalidDataErrorMessage = "Invalid Data"
     static let invalidDataErrorCode = 10002
-    
-    static let invalidPathErrorMessage = "Invalid filename/path."
 }
 
 class NewsService {

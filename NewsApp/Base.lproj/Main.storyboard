@@ -27,7 +27,7 @@
         <!--News List View Controller-->
         <scene sceneID="rA9-79-MPx">
             <objects>
-                <viewController storyboardIdentifier="Contacts" id="RkE-P9-dJw" customClass="NewsListViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsListViewController" id="RkE-P9-dJw" customClass="NewsListViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CI0-2e-QKd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

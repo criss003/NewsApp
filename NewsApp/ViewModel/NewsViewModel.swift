@@ -10,9 +10,6 @@ import Foundation
 struct NewsViewModelConstants {
     static let errorTitle = "Error"
     static let errorMessage = "You have no internet connection."
-    
-    static let unnamedGroup: Character = "*"
-    static let unnamedContact = "John Doe"
 }
 
 protocol NewsViewModelDelegate: class {
